@@ -1,0 +1,13 @@
+<div class="main-container">
+      <div class="image-row">
+        <img class="avatar-image" src="/lucia-macedo-d9_2kPJBG0U-unsplash.jpg" alt="a viola">
+      </div>
+      <div class="name-row">Calvin D</div>
+<% Item.all.each do |the_item| %>
+  <div class="item">
+    <img src="<%= the_item.thumbnail_url %>" class="thumbnail">
+    <a class="link-text" target="_blank" href="<%= the_item.link_url %>">
+    <%= the_item.link_description %></a>
+  </div>
+<% end %>
+</div>
